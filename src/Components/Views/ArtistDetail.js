@@ -42,7 +42,9 @@ class ArtistDetail extends Component {
           text="Back to dashboard"
           className="backButtonCls"
           hasIcon
-          onClick={() => {}}
+          onClick={() => {
+            history.goBack();
+          }}
         >
           <Image imgSource={backIcon} className="backIcon" />
         </Button>
