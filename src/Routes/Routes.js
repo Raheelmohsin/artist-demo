@@ -1,11 +1,5 @@
-import React, { lazy, useEffect } from "react";
-import {
-  Switch,
-  Route,
-  Redirect,
-  withRouter,
-  BrowserRouter as Router
-} from "react-router-dom";
+import React from "react";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Dashboard from "../Components/Views/Dashboard";
 import ArtistDetail from "../Components/Views/ArtistDetail";
 

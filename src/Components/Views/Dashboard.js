@@ -16,9 +16,6 @@ class Dashboard extends Component {
     this.setState({ searchValue: e.target.value });
   };
   onSearch = async () => {
-    // https://app.swaggerhub.com/apis/test-raheel
-    // ea46787c-0153-48d8-b284-3d436bc28592
-    // /artists/{artistname}
     const apiPath = `artists/${this.state.searchValue}`;
     const params = new Map([["app_id", "foo"]]);
     const result = await AjaxService.get(apiPath, params);
@@ -34,7 +31,7 @@ class Dashboard extends Component {
   };
   render() {
     const { history } = this.props;
-    const { artistData, artistEvents } = this.state;
+    const { artistData } = this.state;
 
     return (
       <div className="mainWrap">
@@ -65,19 +62,6 @@ class Dashboard extends Component {
             />
           )}
         </div>
-        {/* {artistEvents.length > 0 && (
-          <div>
-            <h2>Artist Events</h2>
-            {artistEvents.map(e => {
-              const { venue } = e;
-              if (venue) {
-                return <p>{venue.name}</p>;
-              } else {
-                return null;
-              }
-            })}
-          </div>
-        )} */}
       </div>
     );
   }

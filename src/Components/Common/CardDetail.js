@@ -2,8 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Image from "./Image";
-import UserProfileImage from "../Resources/images/userImg.png";
 import Label from "./Label";
 
 const useStyles = makeStyles({

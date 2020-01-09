@@ -6,13 +6,12 @@ const Button = ({
   className,
   disable = false,
   hasIcon,
-  children,
-  childrenClass
+  children
 }) => {
   return (
     <button disabled={disable} className={className} onClick={onClick}>
       {text}
-      {hasIcon && <span className={childrenClass}>{children}</span>}
+      {hasIcon && <span>{children}</span>}
     </button>
   );
 };
@@ -23,8 +22,7 @@ Button.propTypes = {
   onClick: T.func,
   className: T.string,
   hasIcon: T.bool,
-  children: T.element,
-  childrenClass: T.string.isRequired
+  children: T.element
 };
 Button.defaultProps = {
   onClick: null,

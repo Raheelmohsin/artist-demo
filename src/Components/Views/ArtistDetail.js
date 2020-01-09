@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import SimpleCard from "../Common/Card";
 import AjaxService from "../axios";
-import { CardDetail, Button, Label, Image } from "../Common";
-import BackIcon from "../Resources/images/backIcon.svg";
+import { CardDetail, Button } from "../Common";
 
 class ArtistDetail extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class ArtistDetail extends Component {
     const { location } = this.props;
     const { search } = location;
     if (search) {
-      const [queryName, queryValue] = search.split("=");
+      const [queryValue] = search.split("=");
       this.onArtistDetail({ selectedArtist: queryValue });
     }
   };
@@ -40,14 +39,11 @@ class ArtistDetail extends Component {
       <div className="mainWrap">
         <Button
           text="Back"
-          className="PatientDetail__back-button"
+          className="backButtonCls"
           hasIcon
           onClick={() => history.props}
         />
-        {/* {" "}
-          <Image imgSource={BackIcon} />
-          <Label text="Back" /> */}
-        {/* </Button> */}
+
         <div className="cardWrap record">
           {ArtistData && <SimpleCard ArtistData={ArtistData} />}
         </div>
