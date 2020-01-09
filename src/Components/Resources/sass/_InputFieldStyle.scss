@@ -1,0 +1,78 @@
+.fieldLabel {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.formLabel {
+  font-size: 22px;
+  width: 85%;
+  font-weight: 300;
+  display: flex;
+}
+
+.formLabelSmall {
+  font-size: 14px;
+  width: 100%;
+}
+.InputPadding {
+  padding-bottom: 20px;
+}
+
+.formTextField {
+  font-size: 18px;
+  border-bottom: 1px solid $black;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  width: 100%;
+  outline-color: transparent;
+
+  font-weight: 400;
+  background: transparent;
+  .errorField {
+    margin-bottom: 9px;
+    border-bottom: 2px solid #fc2828;
+  }
+  // &:focus {
+  //   border-bottom: 2px solid $black;
+  //   margin-bottom: 9px;
+  // }
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker__input-container {
+  display: block !important;
+}
+
+.react-datepicker-popper {
+  position: static !important;
+  transform: none !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+.asterisk_input:after {
+  content: " *";
+  color: $redColor;
+  font-size: 18px;
+}
+
+.formFieldBg {
+  input[type="text"] {
+    border: none;
+  }
+  textarea,
+  textarea:focus {
+    border: none;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    min-height: 4em;
+    overflow: auto;
+    resize: vertical;
+  }
+}
