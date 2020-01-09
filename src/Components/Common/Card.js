@@ -19,7 +19,11 @@ const SimpleCard = ({ ArtistData = null, onClick }) => {
 
           <div className="userRecord">
             <Label text={name} className="labelCls" />
-            <a href={facebook_page_url} target="_blank">
+            <a
+              href={facebook_page_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Label text={facebook_page_url} className="idCls" />
             </a>
           </div>

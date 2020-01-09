@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
 body {
   font-family: Montserrat;
-  background-color: #eee; }
+  background-color: #f1f1f1; }
 
 .mainBody {
   width: 95%;
@@ -41,7 +41,7 @@ input:focus {
   margin-top: 100px;
   padding: 50px;
   border-radius: 4px;
-  background-color: white;
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 5px 2px #b3b3b3;
   -moz-box-shadow: 0px 4px 5px 2px #b3b3b3;
   box-shadow: 0px 4px 5px 2px #b3b3b3; }
@@ -98,7 +98,7 @@ input:focus {
 
 .idCls {
   font-size: 12px;
-  color: gray; }
+  color: #696969; }
 
 .artistDetailTitle {
   font-size: 14px; }
@@ -206,9 +206,6 @@ input:focus {
   outline-color: transparent;
   font-weight: 400;
   background: transparent; }
-  .formTextField .errorField {
-    margin-bottom: 9px;
-    border-bottom: 2px solid #fc2828; }
 
 .react-datepicker-wrapper {
   width: 100%; }
