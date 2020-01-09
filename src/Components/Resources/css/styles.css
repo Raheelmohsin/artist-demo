@@ -1,17 +1,3 @@
-/*
-.button{
-  @extend .HelveticaRegular;
-   @include single-transition(background, 0.5s);
-  border-top: darken($black, 10%) 5px solid;
- 
-  &:hover{
-   @include single-transition(background, 0.5s);
-  border-top: darken($black, 18%) 5px solid;
-  background: darken($black, 13%);
-  }
- 
-}//button
-*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
 body {
   font-family: Montserrat;
@@ -51,16 +37,36 @@ input:focus {
 .searchWrap {
   width: 50%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 50px;
   margin-top: 100px;
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: white;
   -webkit-box-shadow: 0px 4px 5px 2px #b3b3b3;
   -moz-box-shadow: 0px 4px 5px 2px #b3b3b3;
   box-shadow: 0px 4px 5px 2px #b3b3b3; }
+  @media (max-width: 767px) {
+    .searchWrap {
+      display: block;
+      text-align: center;
+      width: auto;
+      padding: 35px; } }
+
+.searcInnerhWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px; }
+  @media (max-width: 767px) {
+    .searcInnerhWrap {
+      display: block;
+      text-align: center;
+      width: auto; } }
+
+.artistTitle {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold; }
 
 .mainWrap {
   width: 80%;
@@ -99,10 +105,26 @@ input:focus {
 
 .record {
   float: left;
-  margin-bottom: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: center; }
+  margin-bottom: 30px; }
+
+.cardCls {
+  width: 32% !important;
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px; }
+  @media (max-width: 767px) {
+    .cardCls {
+      width: 100% !important;
+      margin-bottom: 20px; } }
+
+.eventTitle {
+  font-weight: bold;
+  float: left;
+  width: 100%;
+  font-size: 24px;
+  padding-left: 10px;
+  margin-bottom: 10px; }
 
 @font-face {
   font-family: 'FontAwesome';
@@ -133,6 +155,23 @@ input:focus {
   cursor: pointer;
   outline-color: transparent;
   font-weight: 500; }
+  @media (max-width: 767px) {
+    .formBtnCls {
+      margin-top: 30px; } }
+
+.backButtonCls {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700; }
+
+.backIcon {
+  width: 10px;
+  float: left;
+  margin-right: 10px; }
 
 .fieldLabel {
   float: left;
@@ -145,6 +184,10 @@ input:focus {
   width: 85%;
   font-weight: 300;
   display: flex; }
+  @media (max-width: 767px) {
+    .formLabel {
+      width: 100%;
+      display: block; } }
 
 .formLabelSmall {
   font-size: 14px;

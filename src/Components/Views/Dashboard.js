@@ -4,6 +4,7 @@ import Button from "../Common/Button";
 import InputField from "../Common/TextField";
 import SimpleCard from "../Common/Card";
 import AjaxService from "../axios";
+import Label from "../Common/Label";
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -36,16 +37,19 @@ class Dashboard extends Component {
     return (
       <div className="mainWrap">
         <div className="searchWrap">
-          <InputField
-            placeholder="Search Artist"
-            onChangeText={e => this.onChange(e)}
-            value={this.state.searchValue}
-          />
-          <Button
-            text="Search"
-            className="formBtnCls"
-            onClick={() => this.onSearch()}
-          />
+          <Label text="Find Your Artist" className="artistTitle" />
+          <div className="searcInnerhWrap">
+            <InputField
+              placeholder="Search Artist"
+              onChangeText={e => this.onChange(e)}
+              value={this.state.searchValue}
+            />
+            <Button
+              text="Search"
+              className="formBtnCls"
+              onClick={() => this.onSearch()}
+            />
+          </div>
         </div>
 
         <div className="cardWrap">

@@ -10,4 +10,23 @@
   cursor: pointer;
   outline-color: transparent;
   font-weight: 500;
+  @include breakpoint(mobile) {
+    margin-top: 30px;
+  }
+}
+
+.backButtonCls {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.backIcon {
+  width: 10px;
+  float: left;
+  margin-right: 10px;
 }

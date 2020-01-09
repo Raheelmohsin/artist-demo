@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import SimpleCard from "../Common/Card";
 import AjaxService from "../axios";
-import { CardDetail, Button } from "../Common";
+import { CardDetail, Button, Image, Label } from "../Common";
+import backIcon from "../Resources/images/backIcon.svg";
 
 class ArtistDetail extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class ArtistDetail extends Component {
     const { location } = this.props;
     const { search } = location;
     if (search) {
-      const [queryValue] = search.split("=");
+      const [queryParam, queryValue] = search.split("=");
       this.onArtistDetail({ selectedArtist: queryValue });
     }
   };
@@ -38,18 +39,21 @@ class ArtistDetail extends Component {
     return (
       <div className="mainWrap">
         <Button
-          text="Back"
+          text="Back to dashboard"
           className="backButtonCls"
           hasIcon
-          onClick={() => history.props}
-        />
+          onClick={() => {}}
+        >
+          <Image imgSource={backIcon} className="backIcon" />
+        </Button>
 
         <div className="cardWrap record">
           {ArtistData && <SimpleCard ArtistData={ArtistData} />}
         </div>
         {artistEvents.length > 0 && (
           <div>
-            <h2>Artist Events</h2>
+            <Label text="Artist Events" className="eventTitle" />
+
             {artistEvents.map(event => {
               const { venue, datetime } = event;
               return (

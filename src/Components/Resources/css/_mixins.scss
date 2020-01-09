@@ -1,91 +1,33 @@
-//Functions that converts pixel width to pecentage equivalent--------------------
-@function calc-percent($target, $container) {
-  @return ($target / $container) * 100%;
-}
+//Mixins for Responsive breakpoints-
 
-//usage => width: width: calc-percent(330,1006);
-
-//Mixins for Responsive breakpoints-----------------------------------------------
-
-
-  @mixin breakpoint($point) {
-
- 
-//   @if $point == mobile {
-//     @media (max-width: 767px)  { @content; }
-//   }//screen720
-//   @else if $point == small {
-//     @media (max-width: 320px)  { @content; }
-//   }//small screen
-
-// @else if $point == mini {
-//     @media (max-width: 480px)  { @content; }
-//   }//screen1024
-//   @else if $point == tablet {
-//     @media (max-width: 1023px)  { @content; }
-//   }//screen1024
-
-// // @else if $point == tablet1024 {
-// //     @media (min-width: 1023px) and (max-width: 1024px)  { @content; }
-// //   }//screen1024
-  @if $point == desktop {
-    @media (max-width: 1366px)  { @content; }
-  }//screen1281
-@else if $point == largeScreen {
-    @media (min-width: 1281px){ @content; }
-  }//screenLargerThen1281
- 
-
-}//breakpoint
-
-//320 = 320 to 767
-//768 = 768 to 1023
-
-//1024 = 1024 +
-//1024  =1024 to 1279 95%, 
-//1280 + max-width:1280px;
-
-// sample Usage
-// .page-wrap {
-//   width: 100%; 
-//   @include breakpoint(tablet) { width: 90%; }
-//   @include breakpoint(desktop) { width: 50%; }
-// }
-
-//RESPONSIVE MEDIA QURIES MIXIN ENDS
-  //
-  //background: darken(#c4d7e1, 13);
-  //@extend .HelveticaBold;
-  //background:$orange;
-  //@include text-shadow(none);
-  //@include text-shadow($black 1px 1px 1px);
-  //@include box-shadow(#343434 1px 2px 2px);
-  //border:lighten($grey, 40) 1px solid;
-  //@include single-transition(background, 0.5s);
-  //
-  //&:hover{            text-decoration: underline; }
-/*
-.button{
-  @extend .HelveticaRegular;
-   @include single-transition(background, 0.5s);
-  border-top: darken($black, 10%) 5px solid;
- 
-  &:hover{
-   @include single-transition(background, 0.5s);
-  border-top: darken($black, 18%) 5px solid;
-  background: darken($black, 13%);
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
   }
- 
-}//button
-*/
-//TRANSPARENT BACKGROUND ONLY STARTS
-@mixin transparentbg($color, $alpha) {
-  $rgba: rgba($color, $alpha);
-  $ie-hex-str: ie-hex-str($rgba);
-  background-color: transparent;
-  background-color: $rgba;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-  zoom: 1;
-}
-//TRANSPARENT BACKGROUND ONLY ENDS
+  //   @else if $point == small {
+  //     @media (max-width: 320px)  { @content; }
+  //   }//small screen
 
+  // @else if $point == mini {
+  //     @media (max-width: 480px)  { @content; }
+  //   }//screen1024
+  //   @else if $point == tablet {
+  //     @media (max-width: 1023px)  { @content; }
+  //   }//screen1024
+
+  // // @else if $point == tablet1024 {
+  // //     @media (min-width: 1023px) and (max-width: 1024px)  { @content; }
+  // //   }//screen1024
+  @if $point == desktop {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  } //screen1281
+  @else if $point == largeScreen {
+    @media (min-width: 1281px) {
+      @content;
+    }
+  } //screenLargerThen1281
+}
